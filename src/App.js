@@ -1,6 +1,6 @@
+import { useState } from "react";
 import Rating from "./components/Rating";
 import './app.scss';
-import { useState } from "react";
 import { createArray } from "./utils";
 
 
@@ -12,7 +12,7 @@ const App = () => {
     readOnly: true
   })
 
-  const inputChange = (e) => {
+  const starInputChange = (e) => {
     if(e.target.value && (e.target.value <= 20)){
       setstate({
         ...state,
@@ -42,7 +42,7 @@ const App = () => {
           <label>Stars</label>
           <input
             type="number" 
-            onChange={inputChange} 
+            onChange={starInputChange} 
             min={0}
             max={20}
             defaultValue={state.stars.length}

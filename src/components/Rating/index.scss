@@ -1,0 +1,40 @@
+
+.rating {
+  .icon{
+    padding-right: 2px;
+  }
+  .filled{
+    &.icon{
+      path {
+        fill: url(#grad-fill) #FFBF00;
+      }
+    }
+  }
+  .half-filled {
+    &.icon{
+      path {
+        fill: url(#grad-half) #FFBF00;
+      }
+    }
+  }
+  &.rating-active {
+    &:hover{
+      .icon {
+        path {
+          fill: url(#grad-fill) #FFBF00;
+        }
+        &:hover ~ .icon{
+          path{
+            fill: #25282e33;
+          }
+        }
+      }
+    }
+  }
+  &.rating-readonly{
+    .icon{
+      user-select: none;
+      cursor: default;
+    }
+  }
+}
